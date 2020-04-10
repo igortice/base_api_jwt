@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
 ruby "2.6.6"
 
@@ -30,6 +30,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec-rails", "~> 4.0.0"
 end
 
 group :development do
@@ -39,7 +40,17 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
+# Color Print
+gem "awesome_print"
+
+# Debug
+gem "pry-byebug"
+
+# Rubocop
 gem "rubocop", require: false
 gem "rubocop-performance", require: false
 gem "rubocop-rails", require: false
 gem "rubocop-rspec", require: false
+
+# Better Log
+gem "shog"
