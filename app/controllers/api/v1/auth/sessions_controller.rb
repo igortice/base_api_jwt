@@ -2,7 +2,6 @@
 
 class API::V1::Auth::SessionsController < Devise::SessionsController
   private
-
     def respond_with(resource, _opts = {})
       render json: resource.as_json(only: [:id, :email])
     end
