@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "API::V1::AuthRequests", type: :request do
-  describe "POST /auth/login" do
+RSpec.describe 'API::V1::AuthRequests', type: :request do
+  describe 'POST /auth/login' do
     let(:url) { '/auth/login' }
     let(:user) { Fabricate(:user) }
     let(:params) do
