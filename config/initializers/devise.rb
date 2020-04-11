@@ -5,12 +5,12 @@
 Devise.setup do |config|
   config.jwt do |jwt|
     jwt.secret              = '25e8e2048a7702be49e486199fe256e6c2c3f2157e2a36e751ffeb23ec9df6ea108570a313aba5742b621484afc6b3f0b41250462bc1185416c372a7305aa5c5'
-    # jwt.dispatch_requests   = [
-    #   ['POST', %r{/auth/login}]
-    # ]
-    # jwt.revocation_requests = [
-    #   ['DELETE', %r{/auth/logout$}]
-    # ]
+    jwt.dispatch_requests   = [
+      ['POST', %r{/auth/login}]
+    ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{/auth/logout}]
+    ]
     jwt.expiration_time     = 5.minutes.to_i
   end
 

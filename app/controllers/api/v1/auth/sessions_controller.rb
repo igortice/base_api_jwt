@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class API::V1::Users::SessionsController < Devise::SessionsController
+class API::V1::Auth::SessionsController < Devise::SessionsController
   private
 
     def respond_with(resource, _opts = {})

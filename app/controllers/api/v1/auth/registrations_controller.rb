@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class API::V1::Users::RegistrationsController < Devise::RegistrationsController
+class API::V1::Auth::RegistrationsController < Devise::RegistrationsController
   def create
     build_resource(sign_up_params)
 
