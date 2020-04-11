@@ -49,7 +49,7 @@ RSpec.describe 'API::V1::Auth::SessionsRequests', type: :request do
   describe 'DELETE /auth/logout' do
     let(:url) { '/auth/logout' }
 
-    it 'returns 204, no content' do
+    it 'returns 204 no content' do
       delete url
       expect(response).to have_http_status(204)
     end
