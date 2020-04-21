@@ -5,7 +5,7 @@ module Ability::Roles::User
 
   included do
     def user
-      can [:index], User, id: @user.id
+      can [:crud], User, id: @user.id
     end
   end
 end
