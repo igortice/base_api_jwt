@@ -29,6 +29,11 @@ Rails.application.routes.draw do
           delete  :'unregister', to: 'auth/registrations#destroy'
         end
       end
+
+      scope controller: :index, path: '' do
+        get 'index'
+        get 'about'
+      end
     end
   end
 end
