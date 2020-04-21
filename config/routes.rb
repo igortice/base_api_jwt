@@ -21,12 +21,12 @@ Rails.application.routes.draw do
       scope :auth do
         devise_scope :user do
           ## SESSIONS ##
-          post    :'login', to: 'auth/sessions#create'
-          delete  :'logout', to: 'auth/sessions#destroy'
+          post :'login', to: 'auth/sessions#create'
+          delete :'logout', to: 'auth/sessions#destroy'
 
           ## REGISTRATIONS ##
-          post    :'register', to: 'auth/registrations#create'
-          delete  :'unregister', to: 'auth/registrations#destroy'
+          post :'register', to: 'auth/registrations#create'
+          delete :'unregister', to: 'auth/registrations#destroy'
         end
       end
 
@@ -34,6 +34,8 @@ Rails.application.routes.draw do
         get 'index'
         get 'about'
       end
+
+      resources :users
     end
   end
 end

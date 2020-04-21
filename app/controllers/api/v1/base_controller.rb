@@ -4,8 +4,8 @@ class API::V1::BaseController < ActionController::API
   before_action :authenticate_user!
 
   rescue_from CanCan::AccessDenied do |exception|
-    render json:   { error: "Accesso negado em #{exception.action} de #{exception.subject.name.pluralize}" },
-           status: :forbidden
+    render json:   { error: "Accesso negado!" },
+           status: :unauthorized
   end
 
   def render_resource(resource)

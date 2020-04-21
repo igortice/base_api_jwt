@@ -52,6 +52,9 @@ gem 'cancancan'
 gem 'devise'
 gem 'devise-jwt'
 
+# Pagination
+gem 'kaminari'
+
 # Debug
 gem 'pry-byebug'
 
